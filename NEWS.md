@@ -18,6 +18,8 @@
 
 - fixed #1215: restoring `par()` settings might fail when the plot window is partitioned, e.g. `par(mfrow = c(1, 2))` (thanks, @jrwishart @jmichaelgilbert)
 
+- fixed #1250: in the quiet mode, `knit()` should not emit the message "processing file ..." when processing child documents (thanks, @KZARCA)
+
 ## MAJOR CHANGES
 
 - **knitr** will no longer generate screenshots automatically for HTML widgets if the **webshot** package or PhantomJS is not installed
@@ -25,6 +27,8 @@
 ## MINOR CHANGES
 
 - if `dev = 'cairo_pdf'`, the `cairo_pdf` device will be used to record plots (previously the `pdf` device was used) (#1235)
+
+- LaTeX short captions now go up to the first `.`, `:` or `;` character followed by a space (thanks, @knokknok, #1249)
 
 # CHANGES IN knitr VERSION 1.13
 
