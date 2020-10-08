@@ -109,7 +109,7 @@ pandoc_fmt = function(config) {
 pandoc_ext = function(format) {
   if (grepl('^html', format)) return('html')
   if (grepl('^latex|beamer|context|texinfo', format)) return('pdf')
-  if (format %in% c('s5', 'slidy', 'slideous', 'dzslides')) return('html')
+  if (format %in% c('s5', 'slidy', 'slideous', 'dzslides', 'revealjs')) return('html')
   if (grepl('^rst', format)) return('rst')
   if (format == 'opendocument') return('xml')
   format
